@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style/main-style.css"/>
+    <link href="style/hamburgers.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous"></script>
+    <title>Adam Giesinger - Willkommen</title>
+</head>
+<body>
+
+<div class="name">
+    <span>Adam Giesinger</span>
+</div>
+
+<nav>
+    <button class="hamburger hamburger--spring" onclick="toggleMenu()" style="outline: none;" type="button">
+            <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+            </span>
+    </button>
+    <ul>
+        <li><a href="index.html" class="active"><span>Portfolio</span>
+            <div class="bar"></div>
+        </a></li>
+        <li><a target="_blank" href="http://github.com/adamgiesinger"><span>GitHub</span>
+            <div class="bar"></div>
+        </a></li>
+        <li><a target="_blank" href="http://ec2-18-204-216-218.compute-1.amazonaws.com/MovieScraper/example/"><span>OpenStream</span>
+            <div class="bar"></div>
+        </a></li>
+    </ul>
+</nav>
+<section class="first-section">
+    <div class="title">
+        <h2>Software Engineer</h2>
+        <h3>out of passion</h3>
+    </div>
+    <div class="keywords">
+        15 years old<br>
+        Flexible. Efficient<br>
+        Open for everything<br>
+        <a style="cursor:pointer" onclick="scrollToElement('#sectionAbout');"><span>Learn more</span>
+            <div class="bar"></div>
+        </a>
+    </div>
+</section>
+<section id="sectionAbout">
+    <div class="title">
+        <h2>About me</h2>
+        <h3>Some information</h3>
+    </div>
+    <div class="whoami">
+        <b>Who am I?</b><br>
+        My name is Adam Giesinger, I'm 15 years old and I live in the City of St. Gallen, Switzerland.
+        Developing and engineering software is one of my biggest hobbies. I also really
+        enjoy playing football with some friends and playing video games.
+        <br><br>
+        <b>My experience</b><br>
+        I've worked on many different projects, some of which you can check out on my
+        <a target="_blank" href="http://github.com/adamgiesinger">GitHub profile</a>. At the moment I am a trainee at
+        <a target="_blank" href="http://namics.com">Namics</a>. I can contribute to many different projects there. I
+        have the
+        opportunity to create iOS apps, Drupal websites, Sitecore applications and many more things at Namics.
+        <br><br>
+
+    </div>
+</section>
+<section>
+    <div class="title">
+        <h2>Projects</h2>
+        <h3>Check this sh*t out</h3>
+    </div>
+    <div class="projects">
+        <a href="https://github.com/adamgiesinger/movie-scraper-backend">
+            <div class="project">
+                <div class="text">
+                    <h3>OpenStream Backend</h3>
+                    <span>PHP</span>
+                </div>
+                <img height="26px"
+                     src="images/arrow-right.svg"
+                     alt="Arrow right">
+            </div>
+        </a>
+        <a href="https://github.com/adamgiesinger/movie-scraper-backend/tree/master/example">
+            <div class="project">
+                <div class="text">
+                    <h3>OpenStream Frontend</h3>
+                    <span>JavaScript</span>
+                </div>
+                <img height="26px"
+                     src="images/arrow-right.svg"
+                     alt="Arrow right">
+            </div>
+        </a>
+        <a href="https://github.com/adamgiesinger/movie-scraper">
+            <div class="project">
+                <div class="text">
+                    <h3>OpenStream iOS</h3>
+                    <span>Swift</span>
+                </div>
+                <img height="26px" src="images/arrow-right.svg"
+                     alt="Arrow right">
+            </div>
+        </a><a href="https://github.com/adamgiesinger/face_recognition">
+        <div class="project">
+            <div class="text">
+                <h3>Face Recognition</h3>
+                <span>Python</span>
+            </div>
+            <img height="26px" src="images/arrow-right.svg"
+                                                                             alt="Arrow right">
+        </div></a>
+        <a href="https://github.com/adamgiesinger/spotify-downloader">
+        <div class="project">
+            <div class="text">
+                <h3>Spotify Downloader v1</h3>
+                <span>Kotlin, Python</span>
+            </div>
+            <img height="26px"
+                                                                               src="images/arrow-right.svg"
+                                                                               alt="Arrow right">
+        </div></a>
+        <a href="https://github.com/adamgiesinger/electron-spotdl">
+        <div class="project">
+            <div class="text">
+                <h3>Spotify Downloader v2</h3>
+                <span>JavaScript, Python</span>
+            </div>
+            <img height="26px" src="images/arrow-right.svg"
+                                                                            alt="Arrow right">
+        </div>
+        </a>
+    </div>
+</section>
+<section>
+    <div class="title">
+        <h2>Contact</h2>
+        <h3>Send me a message</h3>
+    </div>
+    <div class="contact">
+        <form>
+            <div id="contact-response"></div>
+            <input type="text" id="name" placeholder="Full name" required>
+            <input type="email" id="email" placeholder="Email address" required=>
+            <textarea id="message" placeholder="Message" required></textarea>
+            <button onclick="submitForm()">Send message</button>
+        </form>
+    </div>
+</section>
+
+<script src="scripts/menu.js"></script>
+<script src="scripts/submit.js"></script>
+<script src="scripts/scroll.js"></script>
+</body>
+</html>

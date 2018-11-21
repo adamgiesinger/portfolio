@@ -1,0 +1,348 @@
+//@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900");
+
+@white: #FFFFFF;
+@black: #000000;
+@blue: #3b98ef;
+@whiteHover: darken(@white, 2%);
+
+@title: bold 70px "Source Sans Pro", Arial, sans-serif;
+@regular: 17px "Source Sans Pro", Arial, sans-serif;
+
+body, html {
+  background: @white;
+  padding: 0;
+  margin: 0;
+
+  a {
+    display: inline-block;
+    color: @black;
+
+    div.bar {
+      height: 2px;
+      margin-top: -4px;
+      background: @black;
+      -webkit-transition: width 0.3s ease-in;
+      -moz-transition: width 0.3s ease-in;
+      -o-transition: width 0.3s ease-in;
+      transition: width 0.3s ease-in;
+      width: 0;
+    }
+
+    &:hover > div.bar {
+      width: 100%;
+    }
+  }
+
+  .menu-open {
+    background-color: @white;
+  }
+
+  nav {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: none;
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0);
+    -webkit-transition: background-color 0.3s;
+    -moz-transition: background-color 0.3s;
+    -o-transition: background-color 0.3s;
+    transition: background-color 0.3s;
+
+    button.hamburger {
+      margin: 3vh 0;
+      right: 3vw;
+      position: fixed;
+      padding: 0;
+    }
+
+    ul {
+      list-style-type: none;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      font: @title;
+      font-size: 52px;
+      display: none;
+
+      li {
+        margin-bottom: 10px;
+
+        a {
+          text-decoration: none;
+
+          &.active {
+            color: @blue;
+          }
+
+          &.active > div.bar {
+            background-color: @blue;
+          }
+        }
+
+        div.bar {
+          height: 4px;
+        }
+      }
+    }
+  }
+
+  section {
+    width: 80vw;
+    margin: 20vh 10vw;
+
+    &.first-section {
+      width: 60vw;
+      margin: 15vh 20vw;
+    }
+
+    .title {
+      display: inline-block;
+
+      h2 {
+        font: @title;
+        margin: 0;
+        padding: 0;
+      }
+
+      h3 {
+        padding: 0;
+        margin: 10px 0 0;
+        font: @regular;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        text-align: right;
+      }
+    }
+
+    div.keywords {
+      font: @regular;
+      font-weight: 600;
+      color: #888888;
+      line-height: 30px;
+      margin-top: 100px;
+    }
+
+    div.whoami {
+      margin-top: 100px;
+      margin-left: 55%;
+      font: @regular;
+    }
+
+    div.projects {
+      grid-template-columns: 1fr 1fr 1fr;
+      display: grid;
+      margin: 0 -30px 0 -30px;
+
+      a {
+        text-decoration: none;
+      }
+
+      div.project {
+        font: @regular;
+        padding: 20px;
+        margin: 30px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: @white;
+
+        &:hover {
+          background-color: @whiteHover;
+        }
+
+        div.text {
+          h3 {
+            padding: 0;
+            margin: 0;
+            font-weight: 600;
+          }
+
+          span {
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-size: 13px;
+          }
+        }
+
+      }
+    }
+
+  }
+
+  /*flex-wrap: wrap;*/
+
+  div.name {
+    top: 3vh;
+    left: 2vw;
+    position: fixed;
+    font-family: Times, "Times New Roman", serif;
+    font-size: 19px;
+  }
+
+  p {
+    font: @regular;
+    line-height: 25px;
+  }
+
+  @font_family_1: 'Open Sans', 'Arial', 'sans-serif';
+  @font_family_2: 'Cerebri Sans';
+
+  form {
+    textarea {
+      display: block;
+      margin: 25px auto;
+      width: 50%;
+      background: none;
+      border: none;
+      border-bottom: #c6d6dd solid 2px;
+      opacity: 0.8;
+      padding: 10px 0;
+      font: @regular;
+      font-size: 13px;
+      resize: vertical;
+      &::placeholder {
+        font: @regular;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 11px;
+      }
+      &:first-child {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+    input {
+      display: block;
+      margin: 25px auto;
+      width: 50%;
+      background: none;
+      border: none;
+      border-bottom: #c6d6dd solid 2px;
+      opacity: 0.8;
+      padding: 10px 0;
+      font: @regular;
+      font-size: 13px;
+      resize: vertical;
+      &::placeholder {
+        font: @regular;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 11px;
+      }
+      &:first-child {
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+    input[type=checkbox] {
+      display: none;
+      &:checked {
+        & + label.checkbox {
+          &::after {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    label {
+      font-size: 14px;
+      cursor: pointer;
+      position: relative;
+    }
+    label.checkbox {
+      &::before {
+        height: 12px;
+        width: 12px;
+        border: 1px rgba(0, 0, 0, 0.3) solid;
+        display: inline-block;
+        content: '';
+        position: relative;
+        top: 2px;
+        margin-right: 7px;
+      }
+      &::after {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 6px;
+        height: 6px;
+        background: rgba(0, 0, 0, 0.3);
+        opacity: 0;
+        left: 4px;
+        top: 6px;
+      }
+    }
+    button {
+      border: none;
+      border-bottom: 1px solid black;
+      background: none;
+      padding: 0;
+      cursor: pointer;
+      font: @regular;
+      font-size: 14px;
+      margin-top: 30px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      &:hover {
+        color: #6a6a6a;
+      }
+    }
+  }
+
+}
+
+@media screen and (min-width: 1500px) {
+  div.projects {
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  div.projects {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  div.projects {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .name {
+    display: none;
+  }
+
+  section {
+    width: 90vw !important;
+    margin: 15vh 5vw !important;
+
+    div.whoami {
+      margin-left: 25% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  section {
+    .title {
+      h3 {
+        text-align: left !important;
+      }
+    }
+  }
+
+  div.projects {
+    grid-template-columns: 1fr !important;
+  }
+}

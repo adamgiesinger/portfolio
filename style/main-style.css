@@ -1,0 +1,322 @@
+body,
+html {
+  background: #FFFFFF;
+  padding: 0;
+  margin: 0;
+  /*flex-wrap: wrap;*/
+}
+body a,
+html a {
+  display: inline-block;
+  color: #000000;
+}
+body a div.bar,
+html a div.bar {
+  height: 2px;
+  margin-top: -4px;
+  background: #000000;
+  -webkit-transition: width 0.3s ease-in;
+  -moz-transition: width 0.3s ease-in;
+  -o-transition: width 0.3s ease-in;
+  transition: width 0.3s ease-in;
+  width: 0;
+}
+body a:hover > div.bar,
+html a:hover > div.bar {
+  width: 100%;
+}
+body .menu-open,
+html .menu-open {
+  background-color: #FFFFFF;
+}
+body nav,
+html nav {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: none;
+  letter-spacing: 1px;
+  background-color: rgba(0, 0, 0, 0);
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+body nav button.hamburger,
+html nav button.hamburger {
+  margin: 3vh 0;
+  right: 3vw;
+  position: fixed;
+  padding: 0;
+}
+body nav ul,
+html nav ul {
+  list-style-type: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  font: bold 70px "Source Sans Pro", Arial, sans-serif;
+  font-size: 52px;
+  display: none;
+}
+body nav ul li,
+html nav ul li {
+  margin-bottom: 10px;
+}
+body nav ul li a,
+html nav ul li a {
+  text-decoration: none;
+}
+body nav ul li a.active,
+html nav ul li a.active {
+  color: #3b98ef;
+}
+body nav ul li a.active > div.bar,
+html nav ul li a.active > div.bar {
+  background-color: #3b98ef;
+}
+body nav ul li div.bar,
+html nav ul li div.bar {
+  height: 4px;
+}
+body section,
+html section {
+  width: 80vw;
+  margin: 20vh 10vw;
+}
+body section.first-section,
+html section.first-section {
+  width: 60vw;
+  margin: 15vh 20vw;
+}
+body section .title,
+html section .title {
+  display: inline-block;
+}
+body section .title h2,
+html section .title h2 {
+  font: bold 70px "Source Sans Pro", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body section .title h3,
+html section .title h3 {
+  padding: 0;
+  margin: 10px 0 0;
+  font: 17px "Source Sans Pro", Arial, sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  text-align: right;
+}
+body section div.keywords,
+html section div.keywords {
+  font: 17px "Source Sans Pro", Arial, sans-serif;
+  font-weight: 600;
+  color: #888888;
+  line-height: 30px;
+  margin-top: 100px;
+}
+body section div.whoami,
+html section div.whoami {
+  margin-top: 100px;
+  margin-left: 55%;
+  font: 17px "Source Sans Pro", Arial, sans-serif;
+}
+body section div.projects,
+html section div.projects {
+  grid-template-columns: 1fr 1fr 1fr;
+  display: grid;
+  margin: 0 -30px 0 -30px;
+}
+body section div.projects a,
+html section div.projects a {
+  text-decoration: none;
+}
+body section div.projects div.project,
+html section div.projects div.project {
+  font: 17px "Source Sans Pro", Arial, sans-serif;
+  padding: 20px;
+  margin: 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #FFFFFF;
+}
+body section div.projects div.project:hover,
+html section div.projects div.project:hover {
+  background-color: #fafafa;
+}
+body section div.projects div.project div.text h3,
+html section div.projects div.project div.text h3 {
+  padding: 0;
+  margin: 0;
+  font-weight: 600;
+}
+body section div.projects div.project div.text span,
+html section div.projects div.project div.text span {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 13px;
+}
+body div.name,
+html div.name {
+  top: 3vh;
+  left: 2vw;
+  position: fixed;
+  font-family: Times, "Times New Roman", serif;
+  font-size: 19px;
+}
+body p,
+html p {
+  font: 17px "Source Sans Pro", Arial, sans-serif;
+  line-height: 25px;
+}
+body form textarea,
+html form textarea {
+  display: block;
+  margin: 25px auto;
+  width: 50%;
+  background: none;
+  border: none;
+  border-bottom: #c6d6dd solid 2px;
+  opacity: 0.8;
+  padding: 10px 0;
+  font: 17px "Source Sans Pro", Arial, sans-serif;
+  font-size: 13px;
+  resize: vertical;
+}
+body form textarea::placeholder,
+html form textarea::placeholder {
+  font: 17px "Source Sans Pro", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+}
+body form textarea:first-child,
+html form textarea:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body form input,
+html form input {
+  display: block;
+  margin: 25px auto;
+  width: 50%;
+  background: none;
+  border: none;
+  border-bottom: #c6d6dd solid 2px;
+  opacity: 0.8;
+  padding: 10px 0;
+  font: 17px "Source Sans Pro", Arial, sans-serif;
+  font-size: 13px;
+  resize: vertical;
+}
+body form input::placeholder,
+html form input::placeholder {
+  font: 17px "Source Sans Pro", Arial, sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 11px;
+}
+body form input:first-child,
+html form input:first-child {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+body form input[type=checkbox],
+html form input[type=checkbox] {
+  display: none;
+}
+body form input[type=checkbox]:checked + label.checkbox::after,
+html form input[type=checkbox]:checked + label.checkbox::after {
+  opacity: 1;
+}
+body form label,
+html form label {
+  font-size: 14px;
+  cursor: pointer;
+  position: relative;
+}
+body form label.checkbox::before,
+html form label.checkbox::before {
+  height: 12px;
+  width: 12px;
+  border: 1px rgba(0, 0, 0, 0.3) solid;
+  display: inline-block;
+  content: '';
+  position: relative;
+  top: 2px;
+  margin-right: 7px;
+}
+body form label.checkbox::after,
+html form label.checkbox::after {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  left: 4px;
+  top: 6px;
+}
+body form button,
+html form button {
+  border: none;
+  border-bottom: 1px solid black;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  font: 17px "Source Sans Pro", Arial, sans-serif;
+  font-size: 14px;
+  margin-top: 30px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+body form button:hover,
+html form button:hover {
+  color: #6a6a6a;
+}
+@media screen and (min-width: 1500px) {
+  div.projects {
+    grid-template-columns: 1fr 1fr 1fr 1fr !important;
+  }
+}
+@media screen and (max-width: 1500px) {
+  div.projects {
+    grid-template-columns: 1fr 1fr 1fr !important;
+  }
+}
+@media screen and (max-width: 1100px) {
+  div.projects {
+    grid-template-columns: 1fr 1fr !important;
+  }
+}
+@media screen and (max-width: 950px) {
+  .name {
+    display: none;
+  }
+  section {
+    width: 90vw !important;
+    margin: 15vh 5vw !important;
+  }
+  section div.whoami {
+    margin-left: 25% !important;
+  }
+}
+@media screen and (max-width: 640px) {
+  section .title h3 {
+    text-align: left !important;
+  }
+  div.projects {
+    grid-template-columns: 1fr !important;
+  }
+}
+/*# sourceMappingURL=main-style.css.map */
